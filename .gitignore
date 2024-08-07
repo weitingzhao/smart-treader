@@ -10,8 +10,8 @@ build/
 env
 /staticfiles/
 
-.REAMDE.md
-.REAMDE_deploy.md
+README.md
+README_deploy.md
 #src
 *.sqlite*
 
