@@ -10,6 +10,7 @@ build/
 env
 /staticfiles/
 
+.REAMDE.md
 #src
 *.sqlite*
 
