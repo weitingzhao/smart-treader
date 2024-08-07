@@ -11,6 +11,7 @@ env
 /staticfiles/
 
 .REAMDE.md
+.REAMDE_deploy.md
 #src
 *.sqlite*
 
