@@ -2,5 +2,5 @@ django
 gunicorn
 python-dotenv
 whitenoise
-# psycopg2-binary
+psycopg2-binary
 # mysqlclient

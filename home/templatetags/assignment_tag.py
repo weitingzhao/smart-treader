@@ -1,4 +1,3 @@
-import re
 from django import template
 from django.utils.html import format_html
 from home.utils import get_menu_items
@@ -7,18 +6,6 @@ from django.contrib.admin.views.main import (PAGE_VAR)
 
 register = template.Library()
 assignment_tag = register.assignment_tag if hasattr(register, 'assignment_tag') else register.simple_tag
-
-
-@register.filter
-def clean_text(value):
-    res = value.replace('\n', ' ')
-    return res
-
-
-@register.filter
-def checkbox(value):
-    res = re.sub(r"</?(?i:td)(.|\n)*?>", "", value)
-    return res
 
 
 @assignment_tag(takes_context=True)
@@ -74,13 +61,3 @@ def paginator_number(cl, i):
             mark_safe('end' if i == cl.paginator.num_pages else ''),
             i,
         )
-
-
-@register.filter
-def sum_number(value, number):
-    return value + number
-
-
-@register.filter
-def neg_num(value, number):
-    return value - number

@@ -62,6 +62,9 @@ class FetchingSymbolService(BaseService):
 
         # insert function
         def insert_fn(_: Hashable, row: Series):
+            # write a function can calculate two number sum
+
+
             return (
                 row.get('symbol', default="null"),
                 row.get('name', default="null"),
